@@ -80,6 +80,10 @@ const sessionConfig = {
     }
 }
 
+console.log("******************************************");
+console.log("dbUrl: ", dbURL);
+console.log("process.env.DB_URL: ", process.env.DB_URL);
+console.log("******************************************");
 app.use(session(sessionConfig));
 app.use(flash());
 app.use(helmet());
