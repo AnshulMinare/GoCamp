@@ -7,11 +7,7 @@ const Campground = require('../models/campground');
 
 const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/yelp-camp';
 
-mongoose.connect(dbUrl, {
-    useNewUrlParser: true,
-    useCreateIndex: true,
-    useUnifiedTopology: true
-});
+mongoose.connect(dbUrl);
 
 const db = mongoose.connection;
 
@@ -47,6 +43,15 @@ const seedDB = async () => {
                     url: 'https://res.cloudinary.com/douqbebwk/image/upload/v1600060601/YelpCamp/ahfnenvca4tha00h2ubt.png',
                     filename: 'YelpCamp/ahfnenvca4tha00h2ubt'
                 },
+            ]
+        })
+         await camp.save();
+    }
+}
+seedDB().then(() => {
+        mongoose.connection.close();
+    })
+
 
 // const mongoose = require('mongoose');
 // const cities = require('./cities');
