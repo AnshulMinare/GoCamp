@@ -64,3 +64,7 @@ The backend of this website provides a range of features and functionalities, su
 * Using Passport and Middlewares for Authentication and Authorization.
 * Using Multer and Cloudinary for image uploading.
 * Thorough testing and bug fixing.
+
+# Deployment
+The website is deployed on render.
+The link for the website is this :- [GoCamp](https://go-camp-cfc8.onrender.com/)
